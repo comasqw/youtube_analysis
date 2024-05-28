@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Youtube Analyser</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        form {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>YouTube Video Insights</h1>
+    </header>
+    <form action="/submit" method="post">
+        <label for="urls_area">Enter the YouTube video links (one per line)</label><br>
+        <textarea name="urls_area" id="urls_area" cols="50" rows="5"></textarea><br>
+        <label for="sort_by">Sort by</label>
+        <select name="sort_by" id="sort_by">
+            <option value="views">views</option>
+            <option value="length">length</option>
+        </select><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
