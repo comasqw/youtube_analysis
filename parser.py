@@ -24,8 +24,8 @@ def create_sorted_videos_information_dict(urls: list[str], sort_by: str) -> dict
         except PytubeError as e:
             print(f"Error parsing video at {url} - {e}")
             continue
-
-        videos_information_lst.append(video_information)
+        else:
+            videos_information_lst.append(video_information)
 
     if len(videos_information_lst) > 0:
 
